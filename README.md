@@ -1,6 +1,7 @@
 # flaky_test
 
-Inspired by https://github.com/denoland/flaky_test
+Provides utility functions for running unstable tests multiple times. Inspired
+by https://github.com/denoland/flaky_test .
 
 https://deno.land/x/flaky_test
 
