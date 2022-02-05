@@ -58,7 +58,7 @@ Deno.test("throws three times, try 4 times", async (t) => {
   assertEquals(count, 4);
 });
 
-Deno.test("set func name", (t) => {
+Deno.test("set func name", () => {
   const f = flakyTest(function __name__() {});
   assertEquals(f.name, "__name__");
 });
