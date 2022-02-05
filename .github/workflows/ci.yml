@@ -26,7 +26,7 @@ jobs:
         with:
           deno-version: v1.x
       - name: 🧐 Type Check
-        run: deno test --no-run --no-check=remote ./dev/typecheck.ts
+        run: deno test --no-run ./mod.ts
   Test:
     runs-on: ubuntu-latest
     steps:
@@ -37,7 +37,7 @@ jobs:
         with:
           deno-version: v1.x
       - name: 😎 Test
-        run: deno test --allow-net --allow-env=DENO_DEPLOYMENT_ID --allow-read=. --unstable --coverage=coverage
+        run: deno test --coverage=coverage
       - name: Create coverage report
         run: deno coverage ./coverage --lcov > coverage.lcov
       - name: Codecov
