@@ -1,6 +1,9 @@
 name: ci
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "0 9 * * *"
 
@@ -28,11 +31,9 @@ jobs:
           body: |-
             Some external modules are stale.
             <details><summary>Details</summary><div>
-
             ```
             ${{ steps.run-deno-udd.outputs.UDD_RESULT }}
             ```
-
             </div></details>
           branch: deno-udd
           author: GitHub <noreply@github.com>
