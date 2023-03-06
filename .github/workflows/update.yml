@@ -11,7 +11,7 @@ jobs:
   update-deno-dependencies:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
       - uses: denoland/setup-deno@v1
       - name: run deno-udd
         id: run-deno-udd
@@ -31,9 +31,11 @@ jobs:
           body: |-
             Some external modules are stale.
             <details><summary>Details</summary><div>
+            
             ```
             ${{ steps.run-deno-udd.outputs.UDD_RESULT }}
             ```
+            
             </div></details>
           branch: deno-udd
           author: GitHub <noreply@github.com>

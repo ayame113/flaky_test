@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout Module
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Use Deno
         uses: denoland/setup-deno@v1
         with:
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout Module
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Use Deno
         uses: denoland/setup-deno@v1
         with:
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout Module
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Use Deno
         uses: denoland/setup-deno@v1
         with:
@@ -41,7 +41,7 @@ jobs:
       - name: Create coverage report
         run: deno coverage ./coverage --lcov > coverage.lcov
       - name: Codecov
-        uses: codecov/codecov-action@v1.5.2
+        uses: codecov/codecov-action@v3
         with:
           file: ./coverage.lcov
           fail_ci_if_error: true
