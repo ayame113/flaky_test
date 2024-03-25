@@ -1,7 +1,7 @@
 import {
   assertEquals,
   assertRejects,
-} from "https://deno.land/std@0.178.0/testing/asserts.ts";
+} from "https://deno.land/std@0.220.1/testing/asserts.ts";
 import { flakyTest } from "./mod.ts";
 
 Deno.test("not throws", async (t) => {
